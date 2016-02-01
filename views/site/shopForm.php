@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use app\models\Shop;
 
 $this->title = 'SHOP';
 $this->params['breadcrumbs'][] = $this->title;
@@ -9,6 +10,18 @@ $datas = array();
 if ($_POST) {
     $datas = $_POST['ShopFormModel'];
 }
+
+/*
+ * Itt van a lekérdezés !!!!
+ * TODO
+ */
+$proba=Shop::find()->all();
+//print_r($proba);
+foreach ($proba as $pro){
+    print_r($pro);
+    echo "<hr>";
+}
+
 ?>
 <a href='http://localhost/phpmyadmin/#PMAURL-1:db_structure.php?db=yii2basic&table=&server=1&target=&token=314f24ea1e8c1d29919c5038ebb6214e' target="_blank">localhost/phpmyadmin</a>
 <div class="site-contact">
@@ -37,8 +50,8 @@ if ($_POST) {
     <div style="float: right; position: fixed; right: 50px; top: 100px;">
         <ul>
             <?php foreach ($datas as $key => $value): ?>
-            <li style="list-style-type: none;"><span><?php echo $key; ?>: <?php echo $value; ?></span></li>
-            <?php endforeach; ?>
+                <li style="list-style-type: none;"><span><?php echo $key; ?>: <?php echo $value; ?></span></li>
+                <?php endforeach; ?>
         </ul>
 
     </div>

@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\ShopFormModel;
+use app\models\Shop;
 
 class SiteController extends Controller {
 
@@ -91,7 +92,15 @@ class SiteController extends Controller {
         if ($model->load(yii::$app->request->post()) && $model->validate()) {
             yii::$app->session->setFlash('success', 'You have entered the data correctly');
         }
-        print_r($_POST);
+  
+        return $this->render('shopForm', ['model' => $model]);
+    }
+        public function actionShop1() {
+        $model = new Shop();
+        if ($model->load(yii::$app->request->post()) && $model->validate()) {
+            yii::$app->session->setFlash('success', 'You have entered the data correctly');
+        }
+  
         return $this->render('shopForm', ['model' => $model]);
     }
 

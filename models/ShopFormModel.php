@@ -4,7 +4,6 @@ namespace app\models;
 
 use yii\base\Model;
 
-
 class ShopFormModel extends Model {
 
     public $name;
@@ -22,12 +21,6 @@ class ShopFormModel extends Model {
         return [
             [['price', 'diagonal', 'height', 'width'], 'number']
         ];
-    }
-
-    public function query() {
-        $sql = 'SELECT * FROM shop';
-
-        $model = User::findBySql($sql)->all();
     }
 
 }
