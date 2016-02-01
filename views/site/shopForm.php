@@ -10,7 +10,7 @@ if ($_POST) {
     $datas = $_POST['ShopFormModel'];
 }
 ?>
-<a href='https://s33.mediacenter.hu/myadmin2/index.php?lang=hu&collation_connection=utf8_general_ci&token=5e72fe7487169a642935114427ee83e2&phpMyAdmin=477662a944c3159094b01b88975172b77f19542c#PMAURL-4:sql.php?db=hidegvarbt_yii2basic&table=shop&server=1&target=&token=5e72fe7487169a642935114427ee83e2' target="_blank">localhost/phpmyadmin</a>
+<a href='http://localhost/phpmyadmin/#PMAURL-1:db_structure.php?db=yii2basic&table=&server=1&target=&token=314f24ea1e8c1d29919c5038ebb6214e' target="_blank">localhost/phpmyadmin</a>
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>
 
